@@ -1,0 +1,9 @@
+KNOWN_BUGS in ResCafe v1.4
+12 Dec 2000
+
+Sometimes the keyboard shortcuts (e.g., Ctrl +) don't seem to register.
+
+-----------------------------------------------------------------------------
+$Id: KNOWN_BUGS,v 1.2 2000/12/12 20:31:11 gbsmith Exp $
+
+

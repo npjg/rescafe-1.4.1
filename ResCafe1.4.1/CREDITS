@@ -1,0 +1,11 @@
+This work was inspired in large part by a C++ app called 'macfork'
+by Andrew Willmott <ajw+macfork@cs.cmu.edu>
+
+Special thanks go to Peter Stuer <Peter.Stuer@pandora.be> who explained the
+format of Mac 32-bit icons such as 'il32', in particular the Run Length
+Encoded (RLE) variety.
+
+Thanks also go to Craig Hockenberry <craig@iconfactory.com> of the IconFactory
+(http://www.iconfactory.com) who was good enough to answer my e-mail and refer
+me to Peter.
+

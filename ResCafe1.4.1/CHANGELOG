@@ -1,0 +1,62 @@
+ResCafe Change Log
+==================
+
+1.4 -> 1.4.1
+---------------
+Changed to MIT License at the request of Alexei Svitkine
+
+1.3 -> 1.4
+---------------
+Yea! Thanks to some tips from Peter Stuer <Peter.Stuer@pandora.be> I finally
+got the 'icns' plugin working! I can now save 32-bit icons with alpha. I
+tweaked a lot of the code so it can better locate the plugins and icons
+directories. The doc menu is now alphabetized and can be traversed with
+'Ctrl +' and 'Ctrl -'. Added a new application to the package called
+'ResPresso' which is a command-line version much like the original 'macfork'.
+It reuses the ResourceManager package and the plugin handlers. Very cool.
+
+1.2.5 -> 1.3
+---------------
+Made some minor code modifications to solve problems I was having with
+Java 1.3. Added an opening splash screen with notifications about the
+loading procedure. Added the beginnings of an 'icns' plugin. Unfortunately
+this does not parse the 32-bit components which really are the most 
+important part of 'icns' )-;.
+
+1.2 -> 1.2.5
+---------------
+Completely replaced Jimi with XpmImage for all code including plugins.
+Also fixed ResCafe top class so multiple files can be loaded on the
+commandline.
+
+
+1.1 -> 1.2
+---------------
+Still more fun changes. Added support for mouse click sorting of
+plugin display columns as well as optimal adjustment of the
+column widths. Rearranged the plugin class hierarchy so almost
+all plugins can take advantage of it. Also added a custom
+XpmImage class that supports mask so icons will be properly
+exported to XPM files. Added the beginnings of GUI windows to
+track the loaded plugins and what they can handle.
+
+1.0.1 -> 1.1
+---------------
+More radical changes. Added support for multiple open documents using the
+new DocumentManager class. Open docs are accessible through a new
+Documents menu.
+
+1.0 -> 1.01      (NOTE: Unreleased)
+---------------
+Put icon loading and plugin scanning into Java Threads. The result is 
+faster start up. Also added menu shortcuts and mnemonics.
+
+0 -> 1.0
+---------------
+Initial Release
+
+
+-----------------------------------------------------------------------------
+$Id: CHANGELOG,v 1.5 2009-08-11 02:40:07 gbsmith Exp $
+-----------------------------------------------------------------------------
+

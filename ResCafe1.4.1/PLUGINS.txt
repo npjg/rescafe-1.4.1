@@ -1,0 +1,52 @@
+ResCafé PLUGINS
+
+This is kinda slapdash, half-assed, (and other words like that) but I hope
+it helps.
+
+All Plugins must descend from the abstract MacResourceHandler class
+through whom they are referenced. This in turn extends JFrame because
+they are intended to be graphical, though they are not always graphically
+realized - such as in a save. I have tried to separate this with a
+display() method, but maybe I should do it differently - like have JFrame
+be a display return type rather than the overall superclass.
+
+In any case the key parts are:
+1) The type signatures. The plugin should return the 4-Letter types (as
+   a String array) it can handle. Failure to do so will cause the plugin
+   NOT to be registered and called.
+
+2) The init() method kicks off the main processing of the plugin. There it
+   will receive a ResourceType object containing the Resources of the type
+   being handled. From it, the plugin can access the raw data to be
+   parsed.
+
+3) The display() method is called when the the handler is displayed in its
+   area, so this would be a good place for the handler to draw up its GUI
+   components.
+ 
+4) The save() method asks the plugin to write the Resources as it sees fit
+   in the given directory.
+
+5) The about() method lets the plugin return some info about itself.
+
+The plugin will also be given the main ResourceModel object i.e. ALL the
+Resources. This is so the plugin can request Resources of additional
+ResourceTypes it may need to fulfill its function. Several ResourceTypes
+make references to other types, or you may want to handle several related
+types altogether, such as various types of Icons.
+
+Hopefully the basic included Handlers will offer a good enough example to
+get you started. For some reason they always use JTable ;-)
+
+
+Someone want to write plugins for:
+   cicn <-- well I did figure out something - don't know how good it is
+   ppat
+   clut
+   PICT
+   snd <- now that would be cool
+?
+
+
+-----------------------------------------------------------------------------
+$Id: PLUGINS.txt,v 1.1 2000/07/15 20:45:57 gbsmith Exp gbsmith $

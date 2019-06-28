@@ -1,0 +1,206 @@
+head	1.2;
+access;
+symbols;
+locks; strict;
+comment	@# @;
+
+
+1.2
+date	99.10.21.22.13.27;	author gbsmith;	state Exp;
+branches;
+next	1.1;
+
+1.1
+date	99.10.04.22.18.54;	author gbsmith;	state Exp;
+branches;
+next	;
+
+
+desc
+@@
+
+
+1.2
+log
+@Added Copyright notice. Made class imports more explicit.
+@
+text
+@/* $Header: /home/gbsmith/projects/MacResReader/ResCafe/src/plugins/RCS/ics4ResourceHandler.java,v 1.1 1999/10/04 22:18:54 gbsmith Exp gbsmith $ */
+
+import javax.swing.JList;
+import javax.swing.JScrollPane;
+import javax.swing.JTable;
+
+import javax.swing.table.DefaultTableModel;
+import javax.swing.table.TableCellRenderer;
+import javax.swing.table.TableColumn;
+
+import java.awt.BorderLayout;
+import java.awt.Image;
+
+import java.awt.image.IndexColorModel;
+import java.awt.image.MemoryImageSource;
+
+import ResourceManager.*;
+
+/*=======================================================================*/
+/*
+ * $Log: ics4ResourceHandler.java,v $
+ * Revision 1.1  1999/10/04 22:18:54  gbsmith
+ * Initial revision
+ *
+ */
+
+/*=======================================================================*/
+/* Copyright (c) 1999 by G. Brannon Smith -- All Rights Reserved         */
+/*=======================================================================*/
+
+/*=======================================================================*/
+public class ics4ResourceHandler extends GBS_ImageResourceHandler
+{
+   /*--- Data -----------------------------------------------------------*/
+   JList resList;
+   JTable resTable;
+
+   private static final String[] columnNames = { "ResID", "Name", "Size", "Icon"};
+
+   IndexColorModel icm;
+   TableCellRenderer renderer = new IconRenderer();
+
+   /*------ RCS ---------------------------------------------------------*/
+   static final String rcsid = "$Id: ics4ResourceHandler.java,v 1.1 1999/10/04 22:18:54 gbsmith Exp gbsmith $";
+
+   /*--- Methods --------------------------------------------------------*/
+   public String[] getTypes()
+   {
+      return new String[]{"ics4"};
+   }
+
+   /*--------------------------------------------------------------------*/
+   public void init( )
+   {
+      MemoryImageSource mis;
+      byte rawData[];
+      byte newData[];
+
+      Resource myResArray[] = resData.getResArray();
+
+      icm = MacStandard16Palette.getColorModel();
+
+      myimages = new Image[myResArray.length];
+
+      for( int i = 0; i < myResArray.length; i++)
+      {
+         rawData = myResArray[i].getData();
+         newData = new byte[256];
+         for (int j = 0; j < 128; j++)
+         {
+            // Grab high 4 bytes
+            newData[j*2]   = (byte)((rawData[j] >> 4) & 0x0F);
+
+            // Grab low 4 bytes
+            newData[j*2+1] = (byte)(rawData[j] & 0x0F);
+         }
+
+         mis = new MemoryImageSource(16, 16, icm, newData, 0, 16);
+         myimages[i] = createImage(mis);
+      }
+   }
+
+
+   /*--------------------------------------------------------------------*/
+   public void display( )
+   {
+      TableColumn tc;
+      DefaultTableModel tmpModel;
+
+      Resource myResArray[] = resData.getResArray();
+
+      setLayout(new BorderLayout());
+      tmpModel = new DefaultTableModel(columnNames, myResArray.length);
+
+      for( int i = 0; i < myResArray.length; i++)
+      {
+         // "ResID", "Name", "Size", "Icon"
+         tmpModel.setValueAt(new Short(myResArray[i].getID()),  i, 0);
+         tmpModel.setValueAt(myResArray[i].getName(),           i, 1);
+         tmpModel.setValueAt(new Integer(myResArray[i].size()), i, 2);
+         tmpModel.setValueAt(myimages[i],                       i, 3);
+      }
+
+      resTable = new JTable(tmpModel);
+      resTable.setRowHeight(20);
+      tc = resTable.getColumn("Icon");
+      tc.setCellRenderer(renderer);
+
+      JScrollPane rtsp = new JScrollPane(resTable);
+      add(rtsp, "Center");
+   }
+}
+@
+
+
+1.1
+log
+@Initial revision
+@
+text
+@d1 1
+a1 1
+/* $Header$ */
+d3 13
+a15 4
+import javax.swing.*;
+import javax.swing.table.*;
+import java.awt.*;
+import java.awt.image.*;
+d21 4
+a24 1
+ * $Log$
+d27 3
+d37 3
+a39 1
+   private static final String[] columnNames = { "ResID", "Name", "Size", "Image"};
+d44 1
+a44 1
+   static final String rcsid = "$Id$";
+d47 1
+a47 1
+   public ics4ResourceHandler()
+d49 1
+a49 1
+      types = new String[]{"ics4"};
+d53 1
+a53 1
+   public void init(String inType, ResourceType inResData )
+a55 1
+      TableColumn tc;
+d59 1
+a59 1
+      resdata = inResData;
+d61 1
+a61 1
+      Resource myResArray[] = resdata.getResArray();
+a62 5
+      setLayout(new BorderLayout());
+      icm = new IndexColorModel(8, 16,
+                                MacStandard16Palette.getReds(),
+                                MacStandard16Palette.getGreens(),
+                                MacStandard16Palette.getBlues());
+a64 3
+      DefaultTableModel tmpModel =
+         new DefaultTableModel(columnNames, myResArray.length);
+
+a66 4
+         tmpModel.setValueAt(new Short(myResArray[i].getID()),  i, 0);
+         tmpModel.setValueAt(myResArray[i].getName(),           i, 1);
+         tmpModel.setValueAt(new Integer(myResArray[i].size()), i, 2);
+
+d80 11
+a90 1
+         tmpModel.setValueAt(myimages[i], i, 3);
+d92 10
+d106 1
+a106 1
+      tc = resTable.getColumn("Image");
+@

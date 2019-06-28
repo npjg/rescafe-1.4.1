@@ -1,0 +1,985 @@
+
+RCS file: RCS/AWTFilePicker.java,v
+Working file: AWTFilePicker.java
+head: 1.2
+branch:
+locks: strict
+access list:
+symbolic names:
+keyword substitution: kv
+total revisions: 2;	selected revisions: 2
+description:
+----------------------------
+revision 1.2
+date: 1999/10/21 20:34:42;  author: gbsmith;  state: Exp;  lines: +10 -3
+Added Copyright notice
+----------------------------
+revision 1.1
+date: 1999/10/08 01:35:34;  author: gbsmith;  state: Exp;
+Initial revision
+=============================================================================
+
+RCS file: RCS/BNDLResourceHandler.java,v
+Working file: BNDLResourceHandler.java
+head: 1.2
+branch:
+locks: strict
+access list:
+symbolic names:
+keyword substitution: kv
+total revisions: 2;	selected revisions: 2
+description:
+----------------------------
+revision 1.2
+date: 1999/10/21 20:42:06;  author: gbsmith;  state: Exp;  lines: +9 -3
+Added Copyright notice
+----------------------------
+revision 1.1
+date: 1999/10/04 21:46:46;  author: gbsmith;  state: Exp;
+Initial revision
+=============================================================================
+
+RCS file: RCS/CURSResourceHandler.java,v
+Working file: CURSResourceHandler.java
+head: 1.2
+branch:
+locks: strict
+	gbsmith: 1.2
+access list:
+symbolic names:
+keyword substitution: kv
+total revisions: 2;	selected revisions: 2
+description:
+----------------------------
+revision 1.2	locked by: gbsmith;
+date: 1999/10/04 21:50:30;  author: gbsmith;  state: Exp;  lines: +95 -22
+Adapted to new initialization technique. Implemented save method.
+----------------------------
+revision 1.1
+date: 1999/09/30 05:19:59;  author: gbsmith;  state: Exp;
+Initial revision
+=============================================================================
+
+RCS file: RCS/DefaultResourceHandler.java,v
+Working file: DefaultResourceHandler.java
+head: 1.3
+branch:
+locks: strict
+access list:
+symbolic names:
+keyword substitution: kv
+total revisions: 3;	selected revisions: 3
+description:
+----------------------------
+revision 1.3
+date: 1999/10/13 23:35:14;  author: gbsmith;  state: Exp;  lines: +23 -45
+Modified variable names to match updated MacResourceHandler superclass.
+Also removed raw byte save method since it is now inherited from
+MacResourceHandler.
+----------------------------
+revision 1.2
+date: 1999/10/04 20:54:27;  author: gbsmith;  state: Exp;  lines: +69 -14
+Changed init method to reflect new method of passing data to Handler.
+Added raw data saving method.
+----------------------------
+revision 1.1
+date: 1999/09/30 05:21:23;  author: gbsmith;  state: Exp;
+Initial revision
+=============================================================================
+
+RCS file: RCS/FREFResourceHandler.java,v
+Working file: FREFResourceHandler.java
+head: 1.1
+branch:
+locks: strict
+	gbsmith: 1.1
+access list:
+symbolic names:
+keyword substitution: kv
+total revisions: 1;	selected revisions: 1
+description:
+----------------------------
+revision 1.1	locked by: gbsmith;
+date: 1999/10/04 21:56:32;  author: gbsmith;  state: Exp;
+Initial revision
+=============================================================================
+
+RCS file: RCS/FileController.java,v
+Working file: FileController.java
+head: 1.6
+branch:
+locks: strict
+access list:
+symbolic names:
+keyword substitution: kv
+total revisions: 6;	selected revisions: 6
+description:
+----------------------------
+revision 1.6
+date: 1999/10/21 22:38:58;  author: gbsmith;  state: Exp;  lines: +15 -4
+Added Copyright notice. Added a few comments.
+----------------------------
+revision 1.5
+date: 1999/10/17 20:37:05;  author: gbsmith;  state: Exp;  lines: +28 -7
+Added error handling stuff for invalid regular files:
+  - Display a dialog upon failure
+  - Do loading with a temp ResourceModel so as to avoid
+    overwriting existing model data if load fails
+----------------------------
+revision 1.4
+date: 1999/10/13 07:10:32;  author: gbsmith;  state: Exp;  lines: +25 -3
+Added MacBinaryHeader check
+----------------------------
+revision 1.3
+date: 1999/10/08 03:16:58;  author: gbsmith;  state: Exp;  lines: +114 -251
+Separated User-interaction functionality (i.e. GUI stuff) into FilePicker
+and subclasses - this makes the Controller more independent and allows for
+possible redesign or reuse.
+----------------------------
+revision 1.2
+date: 1999/10/04 21:10:40;  author: gbsmith;  state: Exp;  lines: +272 -10
+Made class imports more explicit. Added Resource save functionality.
+----------------------------
+revision 1.1
+date: 1999/09/30 05:19:34;  author: gbsmith;  state: Exp;
+Initial revision
+=============================================================================
+
+RCS file: RCS/FilePicker.java,v
+Working file: FilePicker.java
+head: 1.3
+branch:
+locks: strict
+access list:
+symbolic names:
+keyword substitution: kv
+total revisions: 3;	selected revisions: 3
+description:
+----------------------------
+revision 1.3
+date: 1999/10/21 22:40:12;  author: gbsmith;  state: Exp;  lines: +10 -4
+Added Copyright notice.
+----------------------------
+revision 1.2
+date: 1999/10/17 20:33:03;  author: gbsmith;  state: Exp;  lines: +6 -2
+Added 'tellCannotOpen' method.
+----------------------------
+revision 1.1
+date: 1999/10/08 01:35:03;  author: gbsmith;  state: Exp;
+Initial revision
+=============================================================================
+
+RCS file: RCS/GBS_ImageResourceHandler.java,v
+Working file: GBS_ImageResourceHandler.java
+head: 1.1
+branch:
+locks: strict
+	gbsmith: 1.1
+access list:
+symbolic names:
+keyword substitution: kv
+total revisions: 1;	selected revisions: 1
+description:
+----------------------------
+revision 1.1	locked by: gbsmith;
+date: 1999/10/04 21:58:15;  author: gbsmith;  state: Exp;
+Initial revision
+=============================================================================
+
+RCS file: RCS/HandlerTable.java,v
+Working file: HandlerTable.java
+head: 1.6
+branch:
+locks: strict
+access list:
+symbolic names:
+keyword substitution: kv
+total revisions: 6;	selected revisions: 6
+description:
+----------------------------
+revision 1.6
+date: 1999/10/21 22:47:29;  author: gbsmith;  state: Exp;  lines: +36 -21
+Added Copyright notice and a few comments.
+----------------------------
+revision 1.5
+date: 1999/10/18 00:07:30;  author: gbsmith;  state: Exp;  lines: +74 -18
+Added methods for listing handlers and types supported. These
+will eventually be moved into more abstract calls for
+displaying in windows.
+----------------------------
+revision 1.4
+date: 1999/10/13 23:26:31;  author: gbsmith;  state: Exp;  lines: +88 -75
+Made Jar file loading optional by adding JarClassLoader detection code.
+If the loader is not found, the program moves on. Also chopped out some old code.
+----------------------------
+revision 1.3
+date: 1999/10/13 22:55:19;  author: gbsmith;  state: Exp;  lines: +83 -33
+Restored support for loading plugin classes from Jar file archives.
+Uses JarClassLoader class by John D. Mitchell from www.javaworld.com
+----------------------------
+revision 1.2
+date: 1999/10/13 07:51:35;  author: gbsmith;  state: Exp;  lines: +145 -30
+Added RCS tags
+----------------------------
+revision 1.1
+date: 1999/10/04 21:15:41;  author: gbsmith;  state: Exp;
+Initial revision
+=============================================================================
+
+RCS file: RCS/ICN_maskResourceHandler.java,v
+Working file: ICN_maskResourceHandler.java
+head: 1.2
+branch:
+locks: strict
+	gbsmith: 1.2
+access list:
+symbolic names:
+keyword substitution: kv
+total revisions: 2;	selected revisions: 2
+description:
+----------------------------
+revision 1.2	locked by: gbsmith;
+date: 1999/10/04 22:00:05;  author: gbsmith;  state: Exp;  lines: +87 -14
+Added save method and adapted to new init technique.
+----------------------------
+revision 1.1
+date: 1999/09/30 05:21:35;  author: gbsmith;  state: Exp;
+Initial revision
+=============================================================================
+
+RCS file: RCS/ICONResourceHandler.java,v
+Working file: ICONResourceHandler.java
+head: 1.2
+branch:
+locks: strict
+	gbsmith: 1.2
+access list:
+symbolic names:
+keyword substitution: kv
+total revisions: 2;	selected revisions: 2
+description:
+----------------------------
+revision 1.2	locked by: gbsmith;
+date: 1999/10/04 22:02:08;  author: gbsmith;  state: Exp;  lines: +31 -17
+Adapted to new init technique.
+----------------------------
+revision 1.1
+date: 1999/09/30 05:21:43;  author: gbsmith;  state: Exp;
+Initial revision
+=============================================================================
+
+RCS file: RCS/IconFamilyResourceHandler.java,v
+Working file: IconFamilyResourceHandler.java
+head: 1.4
+branch:
+locks: strict
+access list:
+symbolic names:
+keyword substitution: kv
+total revisions: 4;	selected revisions: 4
+description:
+----------------------------
+revision 1.4
+date: 1999/10/18 03:00:29;  author: gbsmith;  state: Exp;  lines: +62 -51
+Added code for icon name collecting. If a resource of given type has
+no name, matching resources of other types are checked for a name.
+----------------------------
+revision 1.3
+date: 1999/10/17 23:13:38;  author: gbsmith;  state: Exp;  lines: +9 -11
+Now gets color models from palette methods.
+----------------------------
+revision 1.2
+date: 1999/10/17 20:32:04;  author: gbsmith;  state: Exp;  lines: +76 -36
+Made needed color models once to share throughout instance. Added "n/a"
+text for unavailable Icon images. Made class imports more explicit.
+----------------------------
+revision 1.1
+date: 1999/10/16 02:20:06;  author: gbsmith;  state: Exp;
+Initial revision
+=============================================================================
+
+RCS file: RCS/IconRenderer.java,v
+Working file: IconRenderer.java
+head: 1.5
+branch:
+locks: strict
+access list:
+symbolic names:
+keyword substitution: kv
+total revisions: 5;	selected revisions: 5
+description:
+----------------------------
+revision 1.5
+date: 1999/10/17 20:20:47;  author: gbsmith;  state: Exp;  lines: +22 -9
+Added type checks to allow rendering of non-Image data as well.
+This allows for messages to be displayed when no Image was found.
+----------------------------
+revision 1.4
+date: 1999/10/16 02:50:22;  author: gbsmith;  state: Exp;  lines: +10 -4
+Return Default Renderer in the case of no Icon - previous version had the
+last Icon carrying over to the next cell
+----------------------------
+revision 1.3
+date: 1999/10/16 02:35:05;  author: gbsmith;  state: Exp;  lines: +13 -5
+Added a null check to make sure we don't try and render non-existent
+icons.
+----------------------------
+revision 1.2
+date: 1999/10/04 21:16:28;  author: gbsmith;  state: Exp;  lines: +10 -3
+Added some comments
+----------------------------
+revision 1.1
+date: 1999/09/30 05:22:43;  author: gbsmith;  state: Exp;
+Initial revision
+=============================================================================
+
+RCS file: RCS/JFilePicker.java,v
+Working file: JFilePicker.java
+head: 1.3
+branch:
+locks: strict
+access list:
+symbolic names:
+keyword substitution: kv
+total revisions: 3;	selected revisions: 3
+description:
+----------------------------
+revision 1.3
+date: 1999/10/21 22:49:11;  author: gbsmith;  state: Exp;  lines: +17 -13
+Added Copyright notice.
+----------------------------
+revision 1.2
+date: 1999/10/17 20:33:58;  author: gbsmith;  state: Exp;  lines: +20 -3
+Added 'tellCannotOpen' method implementation
+----------------------------
+revision 1.1
+date: 1999/10/08 01:46:33;  author: gbsmith;  state: Exp;
+Initial revision
+=============================================================================
+
+RCS file: RCS/MacBinaryHeader.java,v
+Working file: MacBinaryHeader.java
+head: 1.3
+branch:
+locks: strict
+access list:
+symbolic names:
+keyword substitution: kv
+total revisions: 3;	selected revisions: 3
+description:
+----------------------------
+revision 1.3
+date: 1999/10/21 22:55:19;  author: gbsmith;  state: Exp;  lines: +23 -10
+Added Copyright notice and some comments.
+----------------------------
+revision 1.2
+date: 1999/10/13 08:01:27;  author: gbsmith;  state: Exp;  lines: +31 -31
+Removed debugging output in read method. Changed 'System.out' to
+PrintStream parameter in print method (as was originally intended)
+----------------------------
+revision 1.1
+date: 1999/10/13 07:45:41;  author: gbsmith;  state: Exp;
+Initial revision
+=============================================================================
+
+RCS file: RCS/MacResTypeListModel.java,v
+Working file: MacResTypeListModel.java
+head: 1.3
+branch:
+locks: strict
+access list:
+symbolic names:
+keyword substitution: kv
+total revisions: 3;	selected revisions: 3
+description:
+----------------------------
+revision 1.3
+date: 1999/10/21 22:59:37;  author: gbsmith;  state: Exp;  lines: +22 -6
+Added Copyright notice. Made class imports more explicit.
+----------------------------
+revision 1.2
+date: 1999/10/04 21:18:13;  author: gbsmith;  state: Exp;  lines: +13 -11
+Added comments. Changed border.
+----------------------------
+revision 1.1
+date: 1999/09/30 05:23:14;  author: gbsmith;  state: Exp;
+Initial revision
+=============================================================================
+
+RCS file: RCS/MacResourceHandler.java,v
+Working file: MacResourceHandler.java
+head: 1.5
+branch:
+locks: strict
+access list:
+symbolic names:
+keyword substitution: kv
+total revisions: 5;	selected revisions: 5
+description:
+----------------------------
+revision 1.5
+date: 1999/10/21 23:01:38;  author: gbsmith;  state: Exp;  lines: +8 -3
+Added explicit JPanel class import.
+----------------------------
+revision 1.4
+date: 1999/10/19 05:40:25;  author: gbsmith;  state: Exp;  lines: +17 -2
+Added skeletal (but not abstract) 'about' method for getting
+info about the handler class. Also added Copyright.
+----------------------------
+revision 1.3
+date: 1999/10/13 23:32:01;  author: gbsmith;  state: Exp;  lines: +66 -18
+Rearranged some methods. Made some data protected so it can be seen by
+subclasses outside of the package (mainly from the alt class loaders).
+Moved in the default raw bytes save method from the old default handler.
+----------------------------
+revision 1.2
+date: 1999/10/04 21:20:20;  author: gbsmith;  state: Exp;  lines: +32 -8
+Redesigned type signature and initialization. Added ResourceModel
+method and save method.
+----------------------------
+revision 1.1
+date: 1999/09/30 05:23:43;  author: gbsmith;  state: Exp;
+Initial revision
+=============================================================================
+
+RCS file: RCS/MacStandard16Palette.java,v
+Working file: MacStandard16Palette.java
+head: 1.5
+branch:
+locks: strict
+access list:
+symbolic names:
+keyword substitution: kv
+total revisions: 5;	selected revisions: 5
+description:
+----------------------------
+revision 1.5
+date: 1999/10/21 23:05:40;  author: gbsmith;  state: Exp;  lines: +13 -3
+Added Copyright notice.
+----------------------------
+revision 1.4
+date: 1999/10/17 23:01:27;  author: gbsmith;  state: Exp;  lines: +11 -2
+Added 'getColorModel' method that will construct an IndexColorModel
+for the user
+----------------------------
+revision 1.3
+date: 1999/10/13 07:54:47;  author: gbsmith;  state: Exp;  lines: +6 -3
+Made class public
+----------------------------
+revision 1.2
+date: 1999/10/04 21:20:57;  author: gbsmith;  state: Exp;  lines: +10 -2
+Added some comments.
+----------------------------
+revision 1.1
+date: 1999/09/30 05:25:20;  author: gbsmith;  state: Exp;
+Initial revision
+=============================================================================
+
+RCS file: RCS/MacStandard256Palette.java,v
+Working file: MacStandard256Palette.java
+head: 1.5
+branch:
+locks: strict
+access list:
+symbolic names:
+keyword substitution: kv
+total revisions: 5;	selected revisions: 5
+description:
+----------------------------
+revision 1.5
+date: 1999/10/21 23:06:52;  author: gbsmith;  state: Exp;  lines: +12 -2
+Added Copyright notice.
+----------------------------
+revision 1.4
+date: 1999/10/17 23:01:42;  author: gbsmith;  state: Exp;  lines: +12 -3
+Added 'getColorModel' method that will construct an IndexColorModel
+for the user
+----------------------------
+revision 1.3
+date: 1999/10/13 07:55:07;  author: gbsmith;  state: Exp;  lines: +6 -3
+Made class public
+----------------------------
+revision 1.2
+date: 1999/10/04 21:21:16;  author: gbsmith;  state: Exp;  lines: +10 -3
+Added some comments.
+----------------------------
+revision 1.1
+date: 1999/09/30 05:25:14;  author: gbsmith;  state: Exp;
+Initial revision
+=============================================================================
+
+RCS file: RCS/PAT_ResourceHandler.java,v
+Working file: PAT_ResourceHandler.java
+head: 1.1
+branch:
+locks: strict
+	gbsmith: 1.1
+access list:
+symbolic names:
+keyword substitution: kv
+total revisions: 1;	selected revisions: 1
+description:
+----------------------------
+revision 1.1	locked by: gbsmith;
+date: 1999/10/04 22:03:04;  author: gbsmith;  state: Exp;
+Initial revision
+=============================================================================
+
+RCS file: RCS/Palette.java,v
+Working file: Palette.java
+head: 1.1
+branch:
+locks: strict
+	gbsmith: 1.1
+access list:
+symbolic names:
+keyword substitution: kv
+total revisions: 1;	selected revisions: 1
+description:
+----------------------------
+revision 1.1	locked by: gbsmith;
+date: 1999/10/04 22:05:03;  author: gbsmith;  state: Exp;
+Initial revision
+=============================================================================
+
+RCS file: RCS/ResCafe.java,v
+Working file: ResCafe.java
+head: 1.4
+branch:
+locks: strict
+access list:
+symbolic names:
+keyword substitution: kv
+total revisions: 4;	selected revisions: 4
+description:
+----------------------------
+revision 1.4
+date: 1999/10/21 23:08:54;  author: gbsmith;  state: Exp;  lines: +11 -3
+Added Copyright notice.
+----------------------------
+revision 1.3
+date: 1999/10/19 03:56:30;  author: gbsmith;  state: Exp;  lines: +9 -5
+Added accented e to title. Moved window slightly.
+----------------------------
+revision 1.2
+date: 1999/10/13 07:56:26;  author: gbsmith;  state: Exp;  lines: +7 -4
+Altered load call to pass a 'File' rather than a
+'String' filename
+----------------------------
+revision 1.1
+date: 1999/10/04 21:24:02;  author: gbsmith;  state: Exp;
+Initial revision
+=============================================================================
+
+RCS file: RCS/Resource.java,v
+Working file: Resource.java
+head: 1.2
+branch:
+locks: strict
+access list:
+symbolic names:
+keyword substitution: kv
+total revisions: 2;	selected revisions: 2
+description:
+----------------------------
+revision 1.2
+date: 1999/10/04 20:14:42;  author: gbsmith;  state: Exp;  lines: +55 -21
+Placed in package ResourceManager. Made class imports more explicit.
+Added javadoc formatted comments. Made class and accessor methods
+public since package access now more restrictive.
+----------------------------
+revision 1.1
+date: 1999/09/30 05:26:39;  author: gbsmith;  state: Exp;
+Initial revision
+=============================================================================
+
+RCS file: RCS/ResourceIntegers.java,v
+Working file: ResourceIntegers.java
+head: 1.2
+branch:
+locks: strict
+access list:
+symbolic names:
+keyword substitution: kv
+total revisions: 2;	selected revisions: 2
+description:
+----------------------------
+revision 1.2
+date: 1999/10/04 20:05:12;  author: gbsmith;  state: Exp;  lines: +30 -11
+Added javadoc formatted comments
+----------------------------
+revision 1.1
+date: 1999/09/30 05:27:56;  author: gbsmith;  state: Exp;
+Initial revision
+=============================================================================
+
+RCS file: RCS/ResourceModel.java,v
+Working file: ResourceModel.java
+head: 1.5
+branch:
+locks: strict
+access list:
+symbolic names:
+keyword substitution: kv
+total revisions: 5;	selected revisions: 5
+description:
+----------------------------
+revision 1.5
+date: 1999/10/17 20:39:30;  author: gbsmith;  state: Exp;  lines: +26 -3
+Added 'become' method as a kind of midstream copy constructor to
+replace old data with new data while still preserving the actual
+instance which may be referenced in many places.
+----------------------------
+revision 1.4
+date: 1999/10/13 07:43:45;  author: gbsmith;  state: Exp;  lines: +56 -6
+Added support for non-zero file seeks which are necessary to support
+reading a full MacBinary file.
+----------------------------
+revision 1.3
+date: 1999/10/04 20:40:54;  author: gbsmith;  state: Exp;  lines: +133 -168
+Added to package ResourceManager. Made class imports more explicit.
+Added javadoc formatted comment to public classes and methods. With
+new package arrangment, altered accesses of some intra-package
+variable references. Changed 'print' methods to take PrintStream
+params to write to.
+----------------------------
+revision 1.2
+date: 1999/09/30 05:30:47;  author: gbsmith;  state: Exp;  lines: +11 -2
+Added getCountOfType method to ResourceModel
+----------------------------
+revision 1.1
+date: 1999/09/27 06:51:20;  author: gbsmith;  state: Exp;
+Initial revision
+=============================================================================
+
+RCS file: RCS/ResourceType.java,v
+Working file: ResourceType.java
+head: 1.2
+branch:
+locks: strict
+access list:
+symbolic names:
+keyword substitution: kv
+total revisions: 2;	selected revisions: 2
+description:
+----------------------------
+revision 1.2
+date: 1999/10/13 07:43:18;  author: gbsmith;  state: Exp;  lines: +41 -21
+Added support for non-zero file seeks which are necessary to support
+reading a full MacBinary file.
+----------------------------
+revision 1.1
+date: 1999/10/04 20:16:19;  author: gbsmith;  state: Exp;
+Initial revision
+=============================================================================
+
+RCS file: RCS/SICNResourceHandler.java,v
+Working file: SICNResourceHandler.java
+head: 1.2
+branch:
+locks: strict
+	gbsmith: 1.2
+access list:
+symbolic names:
+keyword substitution: kv
+total revisions: 2;	selected revisions: 2
+description:
+----------------------------
+revision 1.2	locked by: gbsmith;
+date: 1999/10/04 22:07:04;  author: gbsmith;  state: Exp;  lines: +30 -17
+Adapted to new init technique.
+----------------------------
+revision 1.1
+date: 1999/09/30 05:22:52;  author: gbsmith;  state: Exp;
+Initial revision
+=============================================================================
+
+RCS file: RCS/STR_ResourceHandler.java,v
+Working file: STR_ResourceHandler.java
+head: 1.2
+branch:
+locks: strict
+	gbsmith: 1.2
+access list:
+symbolic names:
+keyword substitution: kv
+total revisions: 2;	selected revisions: 2
+description:
+----------------------------
+revision 1.2	locked by: gbsmith;
+date: 1999/10/04 22:10:58;  author: gbsmith;  state: Exp;  lines: +73 -14
+Adapted to new init technique and added save method.
+----------------------------
+revision 1.1
+date: 1999/09/30 05:24:34;  author: gbsmith;  state: Exp;
+Initial revision
+=============================================================================
+
+RCS file: RCS/acurResourceHandler.java,v
+Working file: acurResourceHandler.java
+head: 1.2
+branch:
+locks: strict
+	gbsmith: 1.2
+access list:
+symbolic names:
+keyword substitution: kv
+total revisions: 2;	selected revisions: 2
+description:
+----------------------------
+revision 1.2	locked by: gbsmith;
+date: 1999/10/04 22:12:46;  author: gbsmith;  state: Exp;  lines: +29 -14
+Adapted to new init technique.
+----------------------------
+revision 1.1
+date: 1999/09/30 05:31:01;  author: gbsmith;  state: Exp;
+Initial revision
+=============================================================================
+
+RCS file: RCS/cicnParser.java,v
+Working file: cicnParser.java
+head: 1.2
+branch:
+locks: strict
+access list:
+symbolic names:
+keyword substitution: kv
+total revisions: 2;	selected revisions: 2
+description:
+----------------------------
+revision 1.2
+date: 1999/10/17 23:05:24;  author: gbsmith;  state: Exp;  lines: +88 -69
+Seemed to have fixed pixel extraction (which bits represent which pixels)
+and color mapping problems (sometimes cicn Colors are given out
+of sequence). Also started using new getColorModel method on standard
+palettes.
+----------------------------
+revision 1.1
+date: 1999/10/17 21:26:28;  author: gbsmith;  state: Exp;
+Initial revision
+=============================================================================
+
+RCS file: RCS/cicnResourceHandler.java,v
+Working file: cicnResourceHandler.java
+head: 1.2
+branch:
+locks: strict
+access list:
+symbolic names:
+keyword substitution: kv
+total revisions: 2;	selected revisions: 2
+description:
+----------------------------
+revision 1.2
+date: 1999/10/17 23:10:16;  author: gbsmith;  state: Exp;  lines: +25 -13
+Made class imports more explicit.
+Some plain reformatting and reindentation.
+----------------------------
+revision 1.1
+date: 1999/10/17 19:37:43;  author: gbsmith;  state: Exp;
+Initial revision
+=============================================================================
+
+RCS file: RCS/clutResourceHandler.java,v
+Working file: clutResourceHandler.java
+head: 1.2
+branch:
+locks: strict
+	gbsmith: 1.2
+access list:
+symbolic names:
+keyword substitution: kv
+total revisions: 2;	selected revisions: 2
+description:
+----------------------------
+revision 1.2	locked by: gbsmith;
+date: 1999/10/04 22:14:02;  author: gbsmith;  state: Exp;  lines: +29 -14
+Adapted to new init technique.
+----------------------------
+revision 1.1
+date: 1999/09/30 05:31:32;  author: gbsmith;  state: Exp;
+Initial revision
+=============================================================================
+
+RCS file: RCS/icl4ResourceHandler.java,v
+Working file: icl4ResourceHandler.java
+head: 1.2
+branch:
+locks: strict
+	gbsmith: 1.2
+access list:
+symbolic names:
+keyword substitution: kv
+total revisions: 2;	selected revisions: 2
+description:
+----------------------------
+revision 1.2	locked by: gbsmith;
+date: 1999/10/04 22:16:33;  author: gbsmith;  state: Exp;  lines: +32 -17
+Adapted to new init technique.
+----------------------------
+revision 1.1
+date: 1999/09/30 05:31:09;  author: gbsmith;  state: Exp;
+Initial revision
+=============================================================================
+
+RCS file: RCS/icl8ResourceHandler.java,v
+Working file: icl8ResourceHandler.java
+head: 1.1
+branch:
+locks: strict
+	gbsmith: 1.1
+access list:
+symbolic names:
+keyword substitution: kv
+total revisions: 1;	selected revisions: 1
+description:
+----------------------------
+revision 1.1	locked by: gbsmith;
+date: 1999/10/04 22:17:39;  author: gbsmith;  state: Exp;
+Initial revision
+=============================================================================
+
+RCS file: RCS/ics4ResourceHandler.java,v
+Working file: ics4ResourceHandler.java
+head: 1.1
+branch:
+locks: strict
+	gbsmith: 1.1
+access list:
+symbolic names:
+keyword substitution: kv
+total revisions: 1;	selected revisions: 1
+description:
+----------------------------
+revision 1.1	locked by: gbsmith;
+date: 1999/10/04 22:18:54;  author: gbsmith;  state: Exp;
+Initial revision
+=============================================================================
+
+RCS file: RCS/ics8ResourceHandler.java,v
+Working file: ics8ResourceHandler.java
+head: 1.2
+branch:
+locks: strict
+	gbsmith: 1.2
+access list:
+symbolic names:
+keyword substitution: kv
+total revisions: 2;	selected revisions: 2
+description:
+----------------------------
+revision 1.2	locked by: gbsmith;
+date: 1999/10/04 22:25:31;  author: gbsmith;  state: Exp;  lines: +31 -19
+Adapted to new init technique.
+----------------------------
+revision 1.1
+date: 1999/09/30 05:26:34;  author: gbsmith;  state: Exp;
+Initial revision
+=============================================================================
+
+RCS file: RCS/ics_maskResourceHandler.java,v
+Working file: ics_maskResourceHandler.java
+head: 1.2
+branch:
+locks: strict
+	gbsmith: 1.2
+access list:
+symbolic names:
+keyword substitution: kv
+total revisions: 2;	selected revisions: 2
+description:
+----------------------------
+revision 1.2	locked by: gbsmith;
+date: 1999/10/04 22:28:56;  author: gbsmith;  state: Exp;  lines: +86 -15
+Adapted to new init technique. Implemented save method.
+----------------------------
+revision 1.1
+date: 1999/09/30 05:28:03;  author: gbsmith;  state: Exp;
+Initial revision
+=============================================================================
+
+RCS file: RCS/jMainResourceView.java,v
+Working file: jMainResourceView.java
+head: 1.8
+branch:
+locks: strict
+access list:
+symbolic names:
+keyword substitution: kv
+total revisions: 8;	selected revisions: 8
+description:
+----------------------------
+revision 1.8
+date: 1999/10/21 23:44:26;  author: gbsmith;  state: Exp;  lines: +62 -47
+Added Copyright notice. Made class imports more explicit.
+Changed setFileController code a little.
+----------------------------
+revision 1.7
+date: 1999/10/19 06:14:32;  author: gbsmith;  state: Exp;  lines: +102 -21
+Added help menu with items for requesting info about the application
+and about the currently displayed plugin handler.
+----------------------------
+revision 1.6
+date: 1999/10/18 00:08:12;  author: gbsmith;  state: Exp;  lines: +20 -10
+Added menu items and calls for requesting listings of supported
+types and registered handlers.
+----------------------------
+revision 1.5
+date: 1999/10/16 02:19:17;  author: gbsmith;  state: Exp;  lines: +28 -9
+Added menu and items to control handlers - one to Rescan or reload them (so
+they can be changed while running) and one to list the handlers and type
+(not yet implemented)
+----------------------------
+revision 1.4
+date: 1999/10/13 23:42:47;  author: gbsmith;  state: Exp;  lines: +21 -14
+Updated to conform with new MacResourceHandler calls. Removed useless
+'Save' menu item.
+----------------------------
+revision 1.3
+date: 1999/10/04 21:42:57;  author: gbsmith;  state: Exp;  lines: +99 -54
+Made class imports more explicit. Added save and show items to menu.
+Converted to SplitPane layout. A few other adjustments...
+----------------------------
+revision 1.2
+date: 1999/10/02 03:55:36;  author: gbsmith;  state: Exp;  lines: +63 -94
+Moved main method and MVC management out to a top level app class,
+ResCafe.
+----------------------------
+revision 1.1
+date: 1999/09/30 05:12:56;  author: gbsmith;  state: Exp;
+Initial revision
+=============================================================================
+
+RCS file: RCS/plttResourceHandler.java,v
+Working file: plttResourceHandler.java
+head: 1.1
+branch:
+locks: strict
+	gbsmith: 1.1
+access list:
+symbolic names:
+keyword substitution: kv
+total revisions: 1;	selected revisions: 1
+description:
+----------------------------
+revision 1.1	locked by: gbsmith;
+date: 1999/10/04 22:35:42;  author: gbsmith;  state: Exp;
+Initial revision
+=============================================================================
+
+RCS file: RCS/versResourceHandler.java,v
+Working file: versResourceHandler.java
+head: 1.1
+branch:
+locks: strict
+	gbsmith: 1.1
+access list:
+symbolic names:
+keyword substitution: kv
+total revisions: 1;	selected revisions: 1
+description:
+----------------------------
+revision 1.1	locked by: gbsmith;
+date: 1999/10/04 22:38:26;  author: gbsmith;  state: Exp;
+Initial revision
+=============================================================================

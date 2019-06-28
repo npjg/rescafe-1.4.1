@@ -1,0 +1,38 @@
+ResCafé README
+
+Copyright (c) 1999 by George B. Smith
+     <smithg@cs.msstate.edu> good
+     <brannonsmith@yahoo.com> better
+
+INTRODUCTION
+
+ResCafé is a Swing-based Java utility for reading and extracting
+resources such as ICONs and MENUs from the Resource Forks of Macintosh
+files.
+
+
+HYPE
+
+ResCafé was created with one main idea in mind - extensibility. There are
+so many different types of resources and not everyone is interested in the
+same ones (though there are some that are probably more in demand, such as
+Icons). I didn't want to write a parser, what I call a Handler, for all of
+them, but I didn't want to exclude potential new ones or force a recompile
+to add them. So I've tried to implement a kind of "Plugin Architecture"
+which, while awkward in places, seems to work well overall.
+It even "auto-detects" new plugins (with some caveats)! Cool! 
+
+I hope someone will write some cool plugins - mine are kinda boring.
+
+I also took this as an opportunity to explore:
+
+- Swing, which is really cool and powerful once you get to know it;
+  A vast improvement over AWT.
+
+- the MVC (Model-View-Controller) design framework/architecture/whatever.
+  I hope I'm using it right. It seems to a pretty good way to build stuff, 
+  but it can be tricky. I might have kludged it a bit at times.
+
+
+-----------------------------------------------------------------------------
+$Id: README,v 1.1 2000/07/15 20:46:32 gbsmith Exp gbsmith $

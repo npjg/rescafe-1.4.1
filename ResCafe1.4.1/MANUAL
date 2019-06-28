@@ -1,0 +1,57 @@
+ResCafé mini-Manual
+v1.2.5
+
+Loading:
+   To start with you can give a file to open on the command line or
+   'Open' it from the menu. The 'Close' item lets you close the currently
+   displayed file.
+
+Viewing;
+   The 'Type' menu lets you look at either
+   - Only the Resource Types for which Handler Plugins were registered
+   - ALL the Resources loaded
+
+Saving
+   The 'File' menu lets you save:
+   - Only the Resource Types for which Handler Plugins were registered
+     Each Handler can save its Resources in its own particular format.
+   - ALL the Resources loaded; unhandled types simply have their byte
+     data dumped (Big-endian) to files
+   - The currently displayed Type. Again unhandled types simply have
+     their data dumped (Big-endian) to files
+	
+
+   When saving, you are asked for a top level directory name, under which
+all the Resources are saved. Under that directory, a directory for each
+type will be made e.g. 'ICON' or 'ALRT'. All Resources of that type will
+be saved under that dir.
+
+Plugins may also offer their own special save methods but the top menu
+save should work as detailed above. Also some of the included plugins
+may render their types in some special graphical way, but still save
+simply as raw bytes. This could be attributed to programmer laziness
+
+Other:
+   The 'Handlers' menu has items for:
+   - Rescanning the plugins directory to rebuild a more up-to-date
+     handler list. This allows you to recompile and install plugins
+     w/o having to restart the application.
+   - Listing handlers and types. Right now these dump to console
+     stdout but maybe I'll put them in windows. They list all the
+     handled types and which classes are doing the handling, and
+     all registered handlers and which types they can handle.
+     (Kinda confusing).
+
+   The 'Documents' menu:
+   - lists all currently open Resource Files
+   - checks off the currently displayed file
+   - allows for switching between files
+
+   The 'Help' menu has items for:
+   - Throwing up a little blurb about the app.
+   - Showing some info and the handled types of the currently
+     displayed handler frame.
+
+
+-----------------------------------------------------------------------------
+$Id: MANUAL,v 1.1 2000/07/15 20:45:08 gbsmith Exp gbsmith $

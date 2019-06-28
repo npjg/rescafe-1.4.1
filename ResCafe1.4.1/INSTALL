@@ -1,0 +1,103 @@
+ResCafé Installation Notes
+by G. Brannon Smith <brannonsmith@yahoo.com>
+15 Jul 2000
+
+
+DISCLAIMER
+==========
+This app was written and tested on a i386 Linux box with some testing on a
+SPARC Solaris box. If you're on another platform... good luck. (And if
+you're on a Mac, just use ResEdit). BTW I did manage to get it to run on
+my mom's 200MHz 32MB Windows machine after a lot of hassle and it ran...
+OK, kinda jerky though.
+
+REQUIREMENTS
+============
+1. Java 1.2 or better -  available from http://java.sun.com/
+   I develop with Java 1.3, but I think Java 1.2 will work.
+   Not so sure about Java 1.1. In any case you will need Java2D available.
+
+2. Swing classes - also available from http://java.sun.com/
+
+3. Java Advanced Imaging (JAI) - available from from Sun at
+   http://www.javasoft.com/products/java-media/jai/index.html.
+
+4. ResCafé can locate the resource fork in a full MacBinary file. However,
+   it can also read extracted resource forks alone which can be much smaller
+   that full Mac files, depending on the size of the data fork. A utility
+   for extracting the resource fork from a Mac file might be useful. I use
+   `macsave` from the macutils suite on my Linux box. I don't know what else
+   is available.
+
+* JIMI classes are no longer required
+
+I think that's it...
+
+
+INSTALLATION 
+============
+1. Unpack the archive (I guess you already did).
+
+2. Edit `ResCafe.sh` and `ResPresso.sh and fix the ResCafe location.
+   Make sure the ResCafe.jar file is in CLASSPATH. You don't even have to use the
+   shell scripts if you don't want to - non-UNIX users won't anyway and will
+   have to find their own solution (May I suggest installing Linux? ;-) ).
+
+3. Make sure ResCafe.jar, plugins and icons are under the same
+   directory:
+
+                       ResCafe/
+                          |                    +------------+
+             +------------+----------+         | ResCafe.sh |
+             |            |          |         +------------+
+        ResCafe.jar    plugins/    icons/       somewhere...
+                          |  
+        +-----------------+-----------------+
+        |                 |                 |
+SomeHandler.class    AnotherOne/      YetAnother.jar
+                          |
+            +-------------+----------+
+            |                        |
+      TheHandler.class         Support.class      
+
+
+PLUGINS
+=======
+Also notice you can dump plugins right in the plugins dir, put them in their
+own subdirs with additional classes they may need, or stuff them in jar
+files (again with their helper classes). I'd be careful with this last one -
+I just got it working and I don't know how well it works.
+
+That should be it... if you have a better setup, let me know. Again,
+ResCafe.sh is a shell script. If you can't use shell scripts, you'll have to
+come up with something else, like a .bat or whatever you're platform uses.
+
+
+ICONS
+=====
+Hey! Where are all the icons?
+
+Well, the best icons to use are the ones from ResEdit, but I'm not going
+to redistribute them. I suppose you could get a copy of ResEdit and
+extract the icons from there with some tool - a tool that could read the
+resource fork of ResEdit, display the icons therein, and save them. Maybe
+I'll write one - and call it ResCafé!
+
+Of course, some cool custom icons might be better still.
+
+
+JARs of PLUGINS
+===============
+Above I talked about scanning plugins in jar files. However the Jar Class
+Loader I used is copyrighted code from the Javaworld site. I need to contact
+the author about how I can use it. Until then, I don't think I will be
+including the Jar Class Loading classes in this distribution. ResCafé should
+notice their absence and politely move along. To get around this, just don't
+use jar archives of handler for now.
+
+UPDATE: It looks like this feature is being added to the standard Java 
+        distribution so I try to bring this back online soon...
+
+
+-----------------------------------------------------------------------------
+$Id: INSTALL,v 1.4 2000/12/12 20:43:13 gbsmith Exp $

@@ -1,0 +1,9 @@
+# Icon equivalences
+BNDL.xpm	FREF.xpm
+CDEF.xpm	CODE.xpm LDEF.xpm MDEF.xpm PACK.xpm PATC.xpm RSSC.xpm WDEF.xpm dcmp.xpm
+ITL1.xpm	KBDN.xpm TMPL.xpm
+RSED.xpm	aete.xpm alrx.xpm cfrg.xpm dlgx.xpm erm#.xpm fabi.xpm fcds.xpm fcol.xpm fdm2.xpm fmap.xpm fmn2.xpm fndl.xpm ftag.xpm fvew.xpm fvl8.xpm hdlg.xpm hfdr.xpm hmnu.xpm minw.xpm oktb.xpm scsz.xpm tycr.xpm
+icl4.xpm	icl8.xpm
+ics4.xpm	ics8.xpm
+
+

@@ -1,0 +1,32 @@
+TODO on ResCafe v1.1+
+
+o Add a nifty splash screen on startup
+
+o Manual under 'Help' menu
+
+o Add support for multiple plugins for a single type. For example, one
+  might want ti view 'icl8's with both 'Joe Bob's Icon Viewer' and 'Bubba's
+  Deluxe Icon Handler'. The handlers could be stored in a Vector in the
+  Handler Hashtable. A menu or option box could allow switching between
+  types.
+
+   o Along with the above, some kind of Property/Preference editor
+     would have to be implemented to allow the user to choose the
+     principle handler for a type rather than whatever got registered
+     first.
+
+o Type Groups - the user could customize groups of similar types to
+  be displayed or saved. Examples might be
+  "Icon" - 'icl4', 'icl8', 'cicn', etc.
+  "Graphical" - Icons as well as 'PICT's, 'ppat's, etc. 
+  "Multimedia" - Graphical as well as 'snd 's
+  "Menu" - 'MENU', 'mbar', etc.
+
+o Try to load/save Resources with threads
+
+o Get plugin probing in JAR files working
+
+o Add a separate hook for Resource Model devoted to the MacOS 'System'
+  file. Other resource file may refer to resources in the 'System'.
+
+Maybe more, if I can think of them...
