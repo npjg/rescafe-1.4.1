@@ -14,7 +14,7 @@
 
 RESCAFEHOME=.
 JIMI=/opt/java/classes/JimiProClasses.zip
-JAI=/opt/jdk/jre/lib/ext/jai_codec.jar
+JAI=${RESCAFEHOME}/jai-codec-1.1.3.jar
 VERBOSE=0
 
 # Get data file abs paths

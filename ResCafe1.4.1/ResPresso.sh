@@ -14,7 +14,7 @@
 
 RESCAFEHOME=.
 JIMI=/opt/java/classes/JimiProClasses.zip
-JAI=/opt/jdk/jre/lib/ext/jai_codec.jar
+JAI=${RESCAFEHOME}/jai-codec-1.1.3.jar
 
 
 CLASSPATH=${JAI}:${JIMI}:${RESCAFEHOME}/ResCafe.jar:${RESCAFEHOME}/plugins
